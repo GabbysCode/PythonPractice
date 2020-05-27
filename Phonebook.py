@@ -9,8 +9,31 @@ whats_yo_numba = input("and what's yo numba'? ")
 
 
 phonebook = {whats_yo_name: whats_yo_numba}
-print(phonebook)
+# print(phonebook)
 
 
+def search_number():
+    number_exists = input("give the name you want to find the number for ")
+    print(phonebook[number_exists])
 
+# search_number()
+def search_name():
+    name_exists = input("give the number you want to find the name for ")
+    print(phonebook[name_exists])
+    for whats_yo_name,whats_yo_numba in phonebook.items():
+        if whats_yo_numba == name_exists:
+            print(whats_yo_name)
+
+
+search_name()
+
+def return_names():
+    print(phonebook.keys())
+
+
+def return_numbers():
+    print(phonebook.values())
+
+
+# return_numbers()
 
